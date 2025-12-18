@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow cleartext traffic for development and testing -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    
+    <!-- Specific domain configurations -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">erp.vordurja.in</domain>
+        <domain includeSubdomains="true">demo.greycells.info</domain>
+        <domain includeSubdomains="true">vordurja.in</domain>
+        <domain includeSubdomains="true">greycells.info</domain>
+    </domain-config>
+</network-security-config>
+

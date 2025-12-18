@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://arrowleaf.solutions/mybill/my-bill.html -->
+<html lang="en" class="loading"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Student Bill Print Report</title>
+
+    <link href="./Student Bill Print Report_files/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Student Bill Print Report_files/style.min.css">
+    <link rel="stylesheet" type="text/css" href="./Student Bill Print Report_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./Student Bill Print Report_files/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./Student Bill Print Report_files/perfect-scrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="./Student Bill Print Report_files/app.css">
+  </head>
+
+  <body data-col="2-columns" class="2-columns">
+    <div class="wrapper">
+      <nav class="navbar navad navbar-expand-lg navbar-light bg-faded header-navbar">
+        <div class="container">
+          <div class="navbar-header d-flex justfc">
+            <h4 class="card-title mb-0">Student Bill Print Report</h4>
+          </div>
+        </div>
+      </nav>
+
+      <div class="main-panel">
+        <div class="main-content">
+          <div class="content-wrapper">
+
+            <section id="simple-table">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="card p-0">
+                    <div class="card-content">
+                      <div class="card-body">
+                        <table class="table table-responsive table-striped table-bordered">
+                          <tbody>
+                            <tr>
+                              <td>Student Name</td>
+                              <td>
+                                <input type="text" id="studname" name="studname" style="width: 100%" class="textfield" value="John Doe" disabled="">
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>Roll No</td>
+                              <td>
+                                <input type="text" readonly="" class="textfield w-100" value="7969949" disabled="">
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>Registration No / School No</td>
+                              <td>
+                                <input type="text" id="regno" name="regno" style="width: 100%" class="textfield" value="REG2025-12345" disabled="">
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>Curriculum *</td>
+                              <td>
+                                <select name="course" id="course" style="width:100%" class="textfield" onchange="getBatchXml();">
+                                  <option value="">--Select--</option>
+                                  <option value="4" title="CAMBRIDGE" selected="">CAMBRIDGE</option>
+                                  <option value="1" title="ICSE">ICSE</option>
+                                  <option value="3" title="IGCSE">IGCSE</option>
+                                  <option value="2" title="ISC">ISC</option>
+                                </select>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>Batch *</td>
+                              <td>
+                                <select name="cmbBatch" id="cmbBatch" style="width:100%" class="textfield">
+                                  <option value="">--Select--</option>
+                                  <option value="39" title="2025-2026" selected="">2025-2026</option>
+                                  <option value="37" title="2024-2025">2024-2025</option>
+                                  <option value="35" title="2023-2024">2023-2024</option>
+                                </select>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>Fee Scheme Type *</td>
+                              <td>
+                                <label><input type="radio" name="feeScheme" class="mb-1" checked=""> Autumn Term (2)</label>
+                                <label class="ml-1"><input type="radio" name="feeScheme" class="mb-1"> New Admission</label>
+                                <label class="ml-1"><input type="radio" name="feeScheme" class="mb-1"> Spring Term (1)</label>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                <input type="button" name="btnShowReport" id="btnShowReport" class="printButton" style="width:auto;" value="View Student Bill" onclick="window.location.href=&#39;app-assets/JonathanTraylorBio.pdf&#39;">
+                              </td>
+                              <td>
+                                <input type="button" value="View Account Detail" onclick="window.location.href=&#39;app-assets/JonathanTraylorBio.pdf&#39;" name="B3" class="pdfReportButton">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="container-fluid">
+              <div class="navbar-header float-right">
+                <a href="https://arrowleaf.solutions/mybill/my-bill.html" class="btn btn-primary"><i class="fa fa-arrow-circle-right fasc"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer footer-static footer-light">
+          <p class="clearfix text-muted text-sm-center px-2">
+            <span>Copyright © 2025 
+              <a href="https://arrowleaf.solutions/mybill/my-bill.html#" class="text-bold-800 primary darken-2">SCHOOL DEMO</a>, 
+              All rights reserved.
+            </span>
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="./Student Bill Print Report_files/jquery-3.2.1.min.js"></script>
+    <script src="./Student Bill Print Report_files/bootstrap.min.js"></script>
+    <script src="./Student Bill Print Report_files/perfect-scrollbar.jquery.min.js"></script>
+  
+
+</body></html>

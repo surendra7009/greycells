@@ -1,0 +1,882 @@
+{
+	"info": {
+		"_postman_id": "6774f54f-cc28-46bf-a6da-c284b852e782",
+		"name": "HelpDesk_Resolution_Assign_Query",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "50118342",
+		"_collection_link": "https://st-phase-api.postman.co/workspace/1st-Phase-API-Workspace~905c3780-af88-43ed-8ca6-e6bb1c546d91/collection/44156330-6774f54f-cc28-46bf-a6da-c284b852e782?action=share&source=collection_link&creator=50118342"
+	},
+	"item": [
+		{
+			"name": "APIGetQueryPriorityHelpdeskToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/GetAPPSToken?response_type=token&client_secret=test_secret&grant_type=authorization_code&client_id=kspl_123&API_CODE=QueryPriorityHelpdesk",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"GetAPPSToken"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "client_secret",
+							"value": "test_secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "client_id",
+							"value": "kspl_123"
+						},
+						{
+							"key": "API_CODE",
+							"value": "QueryPriorityHelpdesk"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetQueryPriorityHelpdesk",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/APIGetQueryPriorityHelpdesk?callback=QUERYPRIORITYHELPDESK&loginUserId=SIET0004&apiCode=QueryPriorityHelpdesk&accessToken=3799830720f9e04731955a19eaf0b38b",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"APIGetQueryPriorityHelpdesk"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "QUERYPRIORITYHELPDESK"
+						},
+						{
+							"key": "loginUserId",
+							"value": "SIET0004"
+						},
+						{
+							"key": "apiCode",
+							"value": "QueryPriorityHelpdesk"
+						},
+						{
+							"key": "accessToken",
+							"value": "3799830720f9e04731955a19eaf0b38b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetAssignedToActionToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/GetAPPSToken?response_type=token&client_secret=test_secret&grant_type=authorization_code&client_id=kspl_123&API_CODE=APIGetAssignedToAction",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"GetAPPSToken"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "client_secret",
+							"value": "test_secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "client_id",
+							"value": "kspl_123"
+						},
+						{
+							"key": "API_CODE",
+							"value": "APIGetAssignedToAction"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetAssignedToAction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/APIGetAssignedToAction?callback=GETASSIGNEDTOACTION&loginUserId=MG94F00024&apiCode=APIGetAssignedToAction&access&accessToken=5d0f684fcc923ba3552839dfe2f96e0b&cmbQueryNature=1&cmbQueryCategory=26&txtFromDate=01-NOV-2000&txtToDate=03-NOV-2026",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"APIGetAssignedToAction"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "GETASSIGNEDTOACTION"
+						},
+						{
+							"key": "loginUserId",
+							"value": "MG94F00024"
+						},
+						{
+							"key": "apiCode",
+							"value": "APIGetAssignedToAction"
+						},
+						{
+							"key": "access",
+							"value": null
+						},
+						{
+							"key": "accessToken",
+							"value": "5d0f684fcc923ba3552839dfe2f96e0b"
+						},
+						{
+							"key": "cmbQueryNature",
+							"value": "1"
+						},
+						{
+							"key": "cmbQueryCategory",
+							"value": "26"
+						},
+						{
+							"key": "txtFromDate",
+							"value": "01-NOV-2000"
+						},
+						{
+							"key": "txtToDate",
+							"value": "03-NOV-2026"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetQueryResolutionListLoadActionToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/GetAPPSToken?response_type=token&client_secret=test_secret&grant_type=authorization_code&client_id=kspl_123&API_CODE=QueryResolutionListLoadAction",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"GetAPPSToken"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "client_secret",
+							"value": "test_secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "client_id",
+							"value": "kspl_123"
+						},
+						{
+							"key": "API_CODE",
+							"value": "QueryResolutionListLoadAction"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetQueryResolutionListLoadAction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/APIGetQueryResolutionListLoadAction?callback=QUERYRESOLUTIONLISTLOADACTION&loginUserId=MG94F00024&apiCode=QueryResolutionListLoadAction&accessToken=36817f8cab7f5c6fec70d6781597457d&cmbQueryNature=1&cmbQueryCategory=26&txtFromDate=01-NOV-2000&txtToDate=03-NOV-2026",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"APIGetQueryResolutionListLoadAction"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "QUERYRESOLUTIONLISTLOADACTION"
+						},
+						{
+							"key": "loginUserId",
+							"value": "MG94F00024"
+						},
+						{
+							"key": "apiCode",
+							"value": "QueryResolutionListLoadAction"
+						},
+						{
+							"key": "accessToken",
+							"value": "36817f8cab7f5c6fec70d6781597457d"
+						},
+						{
+							"key": "cmbQueryNature",
+							"value": "1"
+						},
+						{
+							"key": "cmbQueryCategory",
+							"value": "26"
+						},
+						{
+							"key": "txtFromDate",
+							"value": "01-NOV-2000"
+						},
+						{
+							"key": "txtToDate",
+							"value": "03-NOV-2026"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetQueryDetailsLoadActionToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/GetAPPSToken?response_type=token&client_secret=test_secret&grant_type=authorization_code&client_id=kspl_123&API_CODE=QueryDetailsLoadAction",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"GetAPPSToken"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "client_secret",
+							"value": "test_secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "client_id",
+							"value": "kspl_123"
+						},
+						{
+							"key": "API_CODE",
+							"value": "QueryDetailsLoadAction"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetQueryDetailsLoadAction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/APIGetQueryDetailsLoadAction?callback=QUERYDETAILSLOADACTION&loginUserId=MG94F00024&apiCode=QueryDetailsLoadAction&accessToken=2959b600f51465e11db38462fe343ea9&hdnQueryResolutionId=10",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"APIGetQueryDetailsLoadAction"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "QUERYDETAILSLOADACTION"
+						},
+						{
+							"key": "loginUserId",
+							"value": "MG94F00024"
+						},
+						{
+							"key": "apiCode",
+							"value": "QueryDetailsLoadAction"
+						},
+						{
+							"key": "accessToken",
+							"value": "2959b600f51465e11db38462fe343ea9"
+						},
+						{
+							"key": "hdnQueryResolutionId",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIQueryResolutionSaveUpdateActionToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/GetAPPSToken?response_type=token&client_secret=test_secret&grant_type=authorization_code&client_id=kspl_123&API_CODE=QUERYRESOLUTIONSAVEUPDATEACTION",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"GetAPPSToken"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "client_secret",
+							"value": "test_secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "client_id",
+							"value": "kspl_123"
+						},
+						{
+							"key": "API_CODE",
+							"value": "QUERYRESOLUTIONSAVEUPDATEACTION"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIQueryResolutionSaveUpdateAction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/APIQueryResolutionSaveUpdateAction?callback=QUERYRESOLUTIONSAVEUPDATEACTION&loginUserId=MG94F00024&apiCode=QUERYRESOLUTIONSAVEUPDATEACTION&accessToken=0819e58a950d4110ba21d4d36980ae1c&hdnQueryResolutionId=30&hdnCurrentStatusId=2&currentStatusName=Resolved",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"APIQueryResolutionSaveUpdateAction"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "QUERYRESOLUTIONSAVEUPDATEACTION"
+						},
+						{
+							"key": "loginUserId",
+							"value": "MG94F00024"
+						},
+						{
+							"key": "apiCode",
+							"value": "QUERYRESOLUTIONSAVEUPDATEACTION"
+						},
+						{
+							"key": "accessToken",
+							"value": "0819e58a950d4110ba21d4d36980ae1c"
+						},
+						{
+							"key": "hdnQueryResolutionId",
+							"value": "30"
+						},
+						{
+							"key": "hdnCurrentStatusId",
+							"value": "2"
+						},
+						{
+							"key": "currentStatusName",
+							"value": "Resolved"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetRemarksDetailsActionToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/GetAPPSToken?response_type=token&client_secret=test_secret&grant_type=authorization_code&client_id=kspl_123&API_CODE=APIGetRemarksDetailsAction",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"GetAPPSToken"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "client_secret",
+							"value": "test_secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "client_id",
+							"value": "kspl_123"
+						},
+						{
+							"key": "API_CODE",
+							"value": "APIGetRemarksDetailsAction"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetRemarksDetailsAction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/APIGetRemarksDetailsAction?callback=GETREMARKSDETAILS&loginUserId=MG94F00024&apiCode=APIGetRemarksDetailsAction&access&accessToken=97d85fef325faca9ed6c755605a7dea9&hdnQueryResolutionId=7",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"APIGetRemarksDetailsAction"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "GETREMARKSDETAILS"
+						},
+						{
+							"key": "loginUserId",
+							"value": "MG94F00024"
+						},
+						{
+							"key": "apiCode",
+							"value": "APIGetRemarksDetailsAction"
+						},
+						{
+							"key": "access",
+							"value": null
+						},
+						{
+							"key": "accessToken",
+							"value": "97d85fef325faca9ed6c755605a7dea9"
+						},
+						{
+							"key": "hdnQueryResolutionId",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetRemarksDetailsSaveActionToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/GetAPPSToken?response_type=token&client_secret=test_secret&grant_type=authorization_code&client_id=kspl_123&API_CODE=REMARKSDETAILSSAVEACTION",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"GetAPPSToken"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "client_secret",
+							"value": "test_secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "client_id",
+							"value": "kspl_123"
+						},
+						{
+							"key": "API_CODE",
+							"value": "REMARKSDETAILSSAVEACTION"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIGetRemarksDetailsSaveAction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/APIGetRemarksDetailsSaveAction?callback=REMARKSDETAILSSAVEACTION&loginUserId=MG94F00024&apiCode=REMARKSDETAILSSAVEACTION&accessToken=c7ff12f52f16a99ba7c03fd28159f994&hdnQueryResolutionId=31&textareaRemark=TestAPIRemark&hdnCurrentStatusId=4",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"APIGetRemarksDetailsSaveAction"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "REMARKSDETAILSSAVEACTION"
+						},
+						{
+							"key": "loginUserId",
+							"value": "MG94F00024"
+						},
+						{
+							"key": "apiCode",
+							"value": "REMARKSDETAILSSAVEACTION"
+						},
+						{
+							"key": "accessToken",
+							"value": "c7ff12f52f16a99ba7c03fd28159f994"
+						},
+						{
+							"key": "hdnQueryResolutionId",
+							"value": "31"
+						},
+						{
+							"key": "textareaRemark",
+							"value": "TestAPIRemark"
+						},
+						{
+							"key": "hdnCurrentStatusId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/APIQueryAssignSaveActionToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/GetAPPSToken?response_type=token&client_secret=test_secret&grant_type=authorization_code&client_id=kspl_123&API_CODE=QUERYASSIGNSAVEACTION",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"GetAPPSToken"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "client_secret",
+							"value": "test_secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "client_id",
+							"value": "kspl_123"
+						},
+						{
+							"key": "API_CODE",
+							"value": "QUERYASSIGNSAVEACTION"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/APIQueryAssignSaveAction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/APIQueryAssignSaveAction?callback=QUERYASSIGNSAVEACTION&loginUserId=MG94F00024&apiCode=QUERYASSIGNSAVEACTION&accessToken=41db1cddbb342f781cb9000fe294cc7f&hdnQueryId=32&textareaRemark=TestChangetheRemark&cmbCurrentStatus=4&cmbQueryNature=2&cmbCategory=26&cmbPriority=3&cmbAssignedTo=1235&currentStatusName=3",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"APIQueryAssignSaveAction"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "QUERYASSIGNSAVEACTION"
+						},
+						{
+							"key": "loginUserId",
+							"value": "MG94F00024"
+						},
+						{
+							"key": "apiCode",
+							"value": "QUERYASSIGNSAVEACTION"
+						},
+						{
+							"key": "accessToken",
+							"value": "41db1cddbb342f781cb9000fe294cc7f"
+						},
+						{
+							"key": "hdnQueryId",
+							"value": "32"
+						},
+						{
+							"key": "textareaRemark",
+							"value": "TestChangetheRemark"
+						},
+						{
+							"key": "cmbCurrentStatus",
+							"value": "4"
+						},
+						{
+							"key": "cmbQueryNature",
+							"value": "2"
+						},
+						{
+							"key": "cmbCategory",
+							"value": "26"
+						},
+						{
+							"key": "cmbPriority",
+							"value": "3"
+						},
+						{
+							"key": "cmbAssignedTo",
+							"value": "1235"
+						},
+						{
+							"key": "currentStatusName",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIQueryAssignRemarksSaveActionToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/IITBRestAPI/1/GetAPPSToken?response_type=token&client_secret=test_secret&grant_type=authorization_code&client_id=kspl_123&API_CODE=QUERYASSIGNREMARKSSAVEACTION",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"IITBRestAPI",
+						"1",
+						"GetAPPSToken"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "client_secret",
+							"value": "test_secret"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "client_id",
+							"value": "kspl_123"
+						},
+						{
+							"key": "API_CODE",
+							"value": "QUERYASSIGNREMARKSSAVEACTION"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APIQueryAssignRemarksSaveAction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://demo.greycells.info/SCHOOL_TESTRestAPI/1/APIQueryAssignRemarksSaveAction?callback=QUERYASSIGNREMARKSSAVEACTION&loginUserId=MG94F00024&apiCode=QUERYASSIGNREMARKSSAVEACTION&accessToken=06aa424cedc431cbe0ccc23d25da75c9&hdnQueryResolutionId=257&textareaRemark=TestAPIRemark&hdnCurrentStatusId=4",
+					"protocol": "http",
+					"host": [
+						"demo",
+						"greycells",
+						"info"
+					],
+					"path": [
+						"SCHOOL_TESTRestAPI",
+						"1",
+						"APIQueryAssignRemarksSaveAction"
+					],
+					"query": [
+						{
+							"key": "callback",
+							"value": "QUERYASSIGNREMARKSSAVEACTION"
+						},
+						{
+							"key": "loginUserId",
+							"value": "MG94F00024"
+						},
+						{
+							"key": "apiCode",
+							"value": "QUERYASSIGNREMARKSSAVEACTION"
+						},
+						{
+							"key": "accessToken",
+							"value": "06aa424cedc431cbe0ccc23d25da75c9"
+						},
+						{
+							"key": "hdnQueryResolutionId",
+							"value": "257"
+						},
+						{
+							"key": "textareaRemark",
+							"value": "TestAPIRemark"
+						},
+						{
+							"key": "hdnCurrentStatusId",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
