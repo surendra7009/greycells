@@ -283,98 +283,6 @@ class _QueryResolutionViewState extends State<QueryResolutionView> {
     );
   }
 
-  Widget _buildStatisticsCards() {
-    if (_queryList.isEmpty) return const SizedBox.shrink();
-    
-    final totalQueries = _queryList.length;
-    final resolvedQueries = _queryList.where((q) => 
-      (q['status']?.toString().toLowerCase() ?? '').contains('resolved') ||
-      (q['status']?.toString().toLowerCase() ?? '').contains('closed')
-    ).length;
-    final pendingQueries = totalQueries - resolvedQueries;
-    
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Statistics',
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge
-                  ?.copyWith(fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 12),
-            Row(
-              children: [
-                Expanded(
-                  child: _buildStatCard(
-                    'Total',
-                    totalQueries.toString(),
-                    Icons.assignment,
-                    Colors.blue,
-                  ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: _buildStatCard(
-                    'Resolved',
-                    resolvedQueries.toString(),
-                    Icons.check_circle,
-                    Colors.green,
-                  ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: _buildStatCard(
-                    'Pending',
-                    pendingQueries.toString(),
-                    Icons.pending,
-                    Colors.orange,
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildStatCard(String label, String value, IconData icon, Color color) {
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.3)),
-      ),
-      child: Column(
-        children: [
-          Icon(icon, color: color, size: 24),
-          const SizedBox(height: 8),
-          Text(
-            value,
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-              fontWeight: FontWeight.bold,
-              color: color,
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            label,
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-              color: Colors.grey[700],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget _buildSearchRow() {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -476,47 +384,18 @@ class _QueryResolutionViewState extends State<QueryResolutionView> {
       final index = entry.key;
       final query = entry.value;
       return [
-        Text(
-          '${index + 1}',
-          textAlign: TextAlign.center,
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-        ),
-        Text(
-          query['referenceNo'] ?? '',
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-        ),
-        Text(
-          query['subject'] ?? '',
-          maxLines: 3,
-          overflow: TextOverflow.ellipsis,
-        ),
+        Text('${index + 1}'),
+        Text(query['referenceNo'] ?? ''),
+        Text(query['subject'] ?? ''),
         Chip(
-          label: Text(
-            query['status'] ?? '',
-            style: const TextStyle(fontSize: 11),
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-          ),
+          label: Text(query['status'] ?? ''),
           backgroundColor: Theme.of(context).primaryColor.withOpacity(0.1),
           labelStyle: TextStyle(color: Theme.of(context).primaryColorDark),
-          padding: const EdgeInsets.symmetric(horizontal: 4),
         ),
-        Text(
-          query['initiatedBy'] ?? '',
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-        ),
-        Text(
-          query['assignedTo'] ?? '',
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-        ),
+        Text(query['initiatedBy'] ?? ''),
+        Text(query['assignedTo'] ?? ''),
         IconButton(
-          icon: const Icon(Icons.open_in_new, size: 20),
-          padding: EdgeInsets.zero,
-          constraints: const BoxConstraints(),
+          icon: const Icon(Icons.open_in_new),
           onPressed: () {
             Navigator.push(
               context,
@@ -596,11 +475,9 @@ class _QueryResolutionViewState extends State<QueryResolutionView> {
             ),
       body: Container(
         color: Colors.grey[100],
-        child: RefreshIndicator(
-          onRefresh: _fetchQueryList,
-          child: ListView(
-            padding: const EdgeInsets.all(16),
-            children: [
+        child: ListView(
+          padding: const EdgeInsets.all(16),
+          children: [
             Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -714,8 +591,6 @@ class _QueryResolutionViewState extends State<QueryResolutionView> {
             const SizedBox(height: 16),
             _buildSearchRow(),
             const SizedBox(height: 16),
-            _buildStatisticsCards(),
-            const SizedBox(height: 16),
             _isLoadingQueries
                 ? const Center(child: CircularProgressIndicator())
                 : _errorMessage != null
@@ -739,31 +614,21 @@ class _QueryResolutionViewState extends State<QueryResolutionView> {
                           ),
                         ),
                       )
-                    : LayoutBuilder(
-                        builder: (context, constraints) {
-                          final tableWidth = constraints.maxWidth;
-                          // Calculate fixed widths based on available space
-                          final fixedWidths = tableWidth - 130; // Reserve space for # and Edit columns
-                          return GCDataTableCard(
-                            headers: headers,
-                            rows: rows,
-                            emptyPlaceholder: 'No query records found.',
-                            rawData: _queryList,
-                            title: 'Query Results',
-                            columnWidths: {
-                              0: FixedColumnWidth(40),   // #
-                              1: FixedColumnWidth(fixedWidths * 0.15),   // Reference No
-                              2: FixedColumnWidth(fixedWidths * 0.30),   // Subject Name
-                              3: FixedColumnWidth(fixedWidths * 0.12),   // Status
-                              4: FixedColumnWidth(fixedWidths * 0.20),   // Initiated By
-                              5: FixedColumnWidth(fixedWidths * 0.20),   // Assigned to
-                              6: FixedColumnWidth(50),   // Edit / View
-                            },
-                          );
+                    : GCDataTableCard(
+                        headers: headers,
+                        rows: rows,
+                        emptyPlaceholder: 'No query records found.',
+                        columnWidths: const {
+                          0: FixedColumnWidth(50),   // #
+                          1: FlexColumnWidth(1.2),   // Reference No
+                          2: FlexColumnWidth(2.0),   // Subject Name
+                          3: FlexColumnWidth(1.0),   // Status
+                          4: FlexColumnWidth(1.5),   // Initiated By
+                          5: FlexColumnWidth(1.5),   // Assigned to
+                          6: FixedColumnWidth(80),   // Edit / View
                         },
                       ),
-            ],
-          ),
+          ],
         ),
       ),
     );

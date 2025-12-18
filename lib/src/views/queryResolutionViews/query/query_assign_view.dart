@@ -681,6 +681,16 @@ class _QueryAssignViewState extends State<QueryAssignView> {
                               headers: headers,
                               rows: rows,
                               emptyPlaceholder: 'No query records found.',
+                              columnWidths: const {
+                                0: FixedColumnWidth(50),   // #
+                                1: FlexColumnWidth(1.2),   // Reference No
+                                2: FlexColumnWidth(2.0),   // Subject Name
+                                3: FlexColumnWidth(2.5),   // Query
+                                4: FlexColumnWidth(1.5),   // Initiated By
+                                5: FlexColumnWidth(1.5),   // Assigned to
+                                6: FlexColumnWidth(1.0),   // Current Status
+                                7: FixedColumnWidth(80),   // Edit / View
+                              },
                             ),
                 ],
               ),
